@@ -1,0 +1,10 @@
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\bin\WcfServicePoderosaDemo.dll.config
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\bin\WcfServicePoderosaDemo.dll
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\bin\WcfServicePoderosaDemo.pdb
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\bin\WcfServicePoderosa.Contracts.dll
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\bin\WcfServicePoderosa.Contracts.pdb
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\obj\Debug\WcfServicePoderosaDemo.csprojAssemblyReference.cache
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\obj\Debug\WcfServicePoderosaDemo.csproj.CoreCompileInputs.cache
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\obj\Debug\WcfServicePoderosaDemo.csproj.CopyComplete
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\obj\Debug\WcfServicePoderosaDemo.dll
+F:\Free\Formativa\PODEROSA\WcfServicePoderosaDemo\WcfServicePoderosaDemo\obj\Debug\WcfServicePoderosaDemo.pdb
