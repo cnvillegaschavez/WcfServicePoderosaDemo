@@ -9,15 +9,12 @@ namespace WcfServicePoderosaDemo
     public interface IEmployeeService
     {
         [OperationContract]
-        void DoWork();
+        [FaultContract(typeof(ErrorInformation))]
+        EmployeeInfo GetEmployee(EmployeeRequest employeeRequest);
 
         [OperationContract]
-        [FaultContract(typeof(ErrorInformation))]
-        List<EmployeeContract> GetAllEmployes();
-
-        [OperationContract]
-        [FaultContract(typeof(ErrorInformation))]
-        void CreateEmployee(EmployeeContract employeeContract);
+        //[FaultContract(typeof(ErrorInformation))]
+        void CreateEmployee(EmployeeInfo employeeInfo);
     }
 
     [ServiceContract]

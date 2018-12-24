@@ -1,0 +1,35 @@
+﻿@model WebApplicationPoderosa.WSEmployeeService.EmployeeInfo
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>EmployeeInfo</h4>
+    @if (ViewBag.ValidationMessage == string.Empty)
+    {
+        <label>Name: @Model.Name</label>
+    }
+    else
+    {
+        <label style="color:red;">@ViewBag.ValidationMessage</label>
+    }
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

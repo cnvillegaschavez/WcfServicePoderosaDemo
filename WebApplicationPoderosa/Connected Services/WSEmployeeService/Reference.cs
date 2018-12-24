@@ -15,67 +15,6 @@ namespace WebApplicationPoderosa.WSEmployeeService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeContract", Namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts")]
-    [System.SerializableAttribute()]
-    public partial class EmployeeContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AgeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Age {
-            get {
-                return this.AgeField;
-            }
-            set {
-                if ((this.AgeField.Equals(value) != true)) {
-                    this.AgeField = value;
-                    this.RaisePropertyChanged("Age");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ErrorInformation", Namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts")]
     [System.SerializableAttribute()]
     public partial class ErrorInformation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -84,7 +23,10 @@ namespace WebApplicationPoderosa.WSEmployeeService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorMessageField;
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplicationPoderosa.WSEmployeeService.MessageType MessageTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -97,14 +39,27 @@ namespace WebApplicationPoderosa.WSEmployeeService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorMessage {
+        public string Message {
             get {
-                return this.ErrorMessageField;
+                return this.MessageField;
             }
             set {
-                if ((object.ReferenceEquals(this.ErrorMessageField, value) != true)) {
-                    this.ErrorMessageField = value;
-                    this.RaisePropertyChanged("ErrorMessage");
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplicationPoderosa.WSEmployeeService.MessageType MessageType {
+            get {
+                return this.MessageTypeField;
+            }
+            set {
+                if ((this.MessageTypeField.Equals(value) != true)) {
+                    this.MessageTypeField = value;
+                    this.RaisePropertyChanged("MessageType");
                 }
             }
         }
@@ -119,50 +74,84 @@ namespace WebApplicationPoderosa.WSEmployeeService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MessageType", Namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts")]
+    public enum MessageType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Error = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Success = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Information = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Warning = 3,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WSEmployeeService.IEmployeeService")]
     public interface IEmployeeService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/DoWork", ReplyAction="http://tempuri.org/IEmployeeService/DoWorkResponse")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployee", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WebApplicationPoderosa.WSEmployeeService.ErrorInformation), Action="http://tempuri.org/IEmployeeService/GetEmployeeErrorInformationFault", Name="ErrorInformation", Namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts")]
+        WebApplicationPoderosa.WSEmployeeService.EmployeeInfo GetEmployee(WebApplicationPoderosa.WSEmployeeService.EmployeeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/DoWork", ReplyAction="http://tempuri.org/IEmployeeService/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetAllEmployes", ReplyAction="http://tempuri.org/IEmployeeService/GetAllEmployesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WebApplicationPoderosa.WSEmployeeService.ErrorInformation), Action="http://tempuri.org/IEmployeeService/GetAllEmployesErrorInformationFault", Name="ErrorInformation", Namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts")]
-        WebApplicationPoderosa.WSEmployeeService.EmployeeContract[] GetAllEmployes();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetAllEmployes", ReplyAction="http://tempuri.org/IEmployeeService/GetAllEmployesResponse")]
-        System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.EmployeeContract[]> GetAllEmployesAsync();
+        // CODEGEN: Generating message contract since the operation has multiple return values.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployee", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeResponse")]
+        System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.EmployeeInfo> GetEmployeeAsync(WebApplicationPoderosa.WSEmployeeService.EmployeeRequest request);
         
         // CODEGEN: Generating message contract since the operation CreateEmployee is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeService/CreateEmployeeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WebApplicationPoderosa.WSEmployeeService.ErrorInformation), Action="http://tempuri.org/IEmployeeService/CreateEmployeeErrorInformationFault", Name="ErrorInformation", Namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts")]
-        WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse CreateEmployee(WebApplicationPoderosa.WSEmployeeService.EmployeeContract1 request);
+        WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse CreateEmployee(WebApplicationPoderosa.WSEmployeeService.EmployeeInfo request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeService/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse> CreateEmployeeAsync(WebApplicationPoderosa.WSEmployeeService.EmployeeContract1 request);
+        System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse> CreateEmployeeAsync(WebApplicationPoderosa.WSEmployeeService.EmployeeInfo request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EmployeeContract", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class EmployeeContract1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EmployeeRequestObject", WrapperNamespace="http://podera.com/employee", IsWrapped=true)]
+    public partial class EmployeeRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
-        public string Name;
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://podera.com/employee")]
+        public string LicenseKey;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public int Age;
+        public int EmployeeId;
         
-        public EmployeeContract1() {
+        public EmployeeRequest() {
         }
         
-        public EmployeeContract1(string Name, int Age) {
+        public EmployeeRequest(string LicenseKey, int EmployeeId) {
+            this.LicenseKey = LicenseKey;
+            this.EmployeeId = EmployeeId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EmployeeInfoObject", WrapperNamespace="http://podera.com/employee", IsWrapped=true)]
+    public partial class EmployeeInfo {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://podera.com/employee", Order=0)]
+        public int EmployeeId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://podera.com/employee", Order=1)]
+        public string Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://podera.com/employee", Order=2)]
+        public string Address;
+        
+        public EmployeeInfo() {
+        }
+        
+        public EmployeeInfo(int EmployeeId, string Name, string Address) {
+            this.EmployeeId = EmployeeId;
             this.Name = Name;
-            this.Age = Age;
+            this.Address = Address;
         }
     }
     
@@ -203,43 +192,48 @@ namespace WebApplicationPoderosa.WSEmployeeService {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplicationPoderosa.WSEmployeeService.EmployeeInfo WebApplicationPoderosa.WSEmployeeService.IEmployeeService.GetEmployee(WebApplicationPoderosa.WSEmployeeService.EmployeeRequest request) {
+            return base.Channel.GetEmployee(request);
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public string GetEmployee(string LicenseKey, ref int EmployeeId, out string Address) {
+            WebApplicationPoderosa.WSEmployeeService.EmployeeRequest inValue = new WebApplicationPoderosa.WSEmployeeService.EmployeeRequest();
+            inValue.LicenseKey = LicenseKey;
+            inValue.EmployeeId = EmployeeId;
+            WebApplicationPoderosa.WSEmployeeService.EmployeeInfo retVal = ((WebApplicationPoderosa.WSEmployeeService.IEmployeeService)(this)).GetEmployee(inValue);
+            EmployeeId = retVal.EmployeeId;
+            Address = retVal.Address;
+            return retVal.Name;
         }
         
-        public WebApplicationPoderosa.WSEmployeeService.EmployeeContract[] GetAllEmployes() {
-            return base.Channel.GetAllEmployes();
-        }
-        
-        public System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.EmployeeContract[]> GetAllEmployesAsync() {
-            return base.Channel.GetAllEmployesAsync();
+        public System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.EmployeeInfo> GetEmployeeAsync(WebApplicationPoderosa.WSEmployeeService.EmployeeRequest request) {
+            return base.Channel.GetEmployeeAsync(request);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse WebApplicationPoderosa.WSEmployeeService.IEmployeeService.CreateEmployee(WebApplicationPoderosa.WSEmployeeService.EmployeeContract1 request) {
+        WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse WebApplicationPoderosa.WSEmployeeService.IEmployeeService.CreateEmployee(WebApplicationPoderosa.WSEmployeeService.EmployeeInfo request) {
             return base.Channel.CreateEmployee(request);
         }
         
-        public void CreateEmployee(string Name, int Age) {
-            WebApplicationPoderosa.WSEmployeeService.EmployeeContract1 inValue = new WebApplicationPoderosa.WSEmployeeService.EmployeeContract1();
+        public void CreateEmployee(int EmployeeId, string Name, string Address) {
+            WebApplicationPoderosa.WSEmployeeService.EmployeeInfo inValue = new WebApplicationPoderosa.WSEmployeeService.EmployeeInfo();
+            inValue.EmployeeId = EmployeeId;
             inValue.Name = Name;
-            inValue.Age = Age;
+            inValue.Address = Address;
             WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse retVal = ((WebApplicationPoderosa.WSEmployeeService.IEmployeeService)(this)).CreateEmployee(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse> WebApplicationPoderosa.WSEmployeeService.IEmployeeService.CreateEmployeeAsync(WebApplicationPoderosa.WSEmployeeService.EmployeeContract1 request) {
+        System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse> WebApplicationPoderosa.WSEmployeeService.IEmployeeService.CreateEmployeeAsync(WebApplicationPoderosa.WSEmployeeService.EmployeeInfo request) {
             return base.Channel.CreateEmployeeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse> CreateEmployeeAsync(string Name, int Age) {
-            WebApplicationPoderosa.WSEmployeeService.EmployeeContract1 inValue = new WebApplicationPoderosa.WSEmployeeService.EmployeeContract1();
+        public System.Threading.Tasks.Task<WebApplicationPoderosa.WSEmployeeService.CreateEmployeeResponse> CreateEmployeeAsync(int EmployeeId, string Name, string Address) {
+            WebApplicationPoderosa.WSEmployeeService.EmployeeInfo inValue = new WebApplicationPoderosa.WSEmployeeService.EmployeeInfo();
+            inValue.EmployeeId = EmployeeId;
             inValue.Name = Name;
-            inValue.Age = Age;
+            inValue.Address = Address;
             return ((WebApplicationPoderosa.WSEmployeeService.IEmployeeService)(this)).CreateEmployeeAsync(inValue);
         }
     }

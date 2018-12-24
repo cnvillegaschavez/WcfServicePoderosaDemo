@@ -2,69 +2,45 @@
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EmployeeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:1421/EmployeeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:1421/EmployeeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts" />
+      <xsd:import schemaLocation="http://localhost:1421/EmployeeService.svc?xsd=xsd0" namespace="http://podera.com/employee" />
+      <xsd:import schemaLocation="http://localhost:1421/EmployeeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts" />
       <xsd:import schemaLocation="http://localhost:1421/EmployeeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1421/EmployeeService.svc?xsd=xsd2" namespace="http://tempuri.org/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IEmployeeService_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="EmployeeRequest">
+    <wsdl:part xmlns:q1="http://podera.com/employee" name="parameters" element="q1:EmployeeRequestObject" />
   </wsdl:message>
-  <wsdl:message name="IEmployeeService_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="EmployeeRequest_Headers">
+    <wsdl:part xmlns:q2="http://podera.com/employee" name="LicenseKey" element="q2:LicenseKey" />
   </wsdl:message>
-  <wsdl:message name="IEmployeeService_GetAllEmployes_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllEmployes" />
+  <wsdl:message name="EmployeeInfo">
+    <wsdl:part xmlns:q3="http://podera.com/employee" name="parameters" element="q3:EmployeeInfoObject" />
   </wsdl:message>
-  <wsdl:message name="IEmployeeService_GetAllEmployes_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllEmployesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IEmployeeService_GetAllEmployes_ErrorInformationFault_FaultMessage">
-    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts" name="detail" element="q1:ErrorInformation" />
-  </wsdl:message>
-  <wsdl:message name="EmployeeContract">
-    <wsdl:part name="parameters" element="tns:EmployeeContract" />
-  </wsdl:message>
-  <wsdl:message name="EmployeeContract_Headers">
-    <wsdl:part name="Name" element="tns:Name" />
+  <wsdl:message name="IEmployeeService_GetEmployee_ErrorInformationFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts" name="detail" element="q4:ErrorInformation" />
   </wsdl:message>
   <wsdl:message name="IEmployeeService_CreateEmployee_OutputMessage" />
-  <wsdl:message name="IEmployeeService_CreateEmployee_ErrorInformationFault_FaultMessage">
-    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServicePoderosa.Contracts.Contracts" name="detail" element="q2:ErrorInformation" />
-  </wsdl:message>
   <wsdl:portType name="IEmployeeService">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/DoWork" message="tns:IEmployeeService_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeService/DoWorkResponse" message="tns:IEmployeeService_DoWork_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetAllEmployes">
-      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/GetAllEmployes" message="tns:IEmployeeService_GetAllEmployes_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeService/GetAllEmployesResponse" message="tns:IEmployeeService_GetAllEmployes_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeService/GetAllEmployesErrorInformationFault" name="ErrorInformationFault" message="tns:IEmployeeService_GetAllEmployes_ErrorInformationFault_FaultMessage" />
+    <wsdl:operation name="GetEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/GetEmployee" name="EmployeeRequest" message="tns:EmployeeRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeService/GetEmployeeResponse" name="EmployeeInfo" message="tns:EmployeeInfo" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeService/GetEmployeeErrorInformationFault" name="ErrorInformationFault" message="tns:IEmployeeService_GetEmployee_ErrorInformationFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CreateEmployee">
-      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/CreateEmployee" name="EmployeeContract" message="tns:EmployeeContract" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/CreateEmployee" name="EmployeeInfo" message="tns:EmployeeInfo" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeService/CreateEmployeeResponse" message="tns:IEmployeeService_CreateEmployee_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeService/CreateEmployeeErrorInformationFault" name="ErrorInformationFault" message="tns:IEmployeeService_CreateEmployee_ErrorInformationFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEmployeeService" type="tns:IEmployeeService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IEmployeeService/DoWork" style="document" />
-      <wsdl:input>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeService/GetEmployee" style="document" />
+      <wsdl:input name="EmployeeRequest">
+        <soap:header message="tns:EmployeeRequest_Headers" part="LicenseKey" use="literal" />
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetAllEmployes">
-      <soap:operation soapAction="http://tempuri.org/IEmployeeService/GetAllEmployes" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
+      <wsdl:output name="EmployeeInfo">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="ErrorInformationFault">
@@ -73,16 +49,12 @@
     </wsdl:operation>
     <wsdl:operation name="CreateEmployee">
       <soap:operation soapAction="http://tempuri.org/IEmployeeService/CreateEmployee" style="document" />
-      <wsdl:input name="EmployeeContract">
-        <soap:header message="tns:EmployeeContract_Headers" part="Name" use="literal" />
+      <wsdl:input name="EmployeeInfo">
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
-      <wsdl:fault name="ErrorInformationFault">
-        <soap:fault use="literal" name="ErrorInformationFault" namespace="" />
-      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="EmployeeService">

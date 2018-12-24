@@ -184,6 +184,12 @@
     <Content Include="Connected Services\WSEmployeeService\WebApplicationPoderosa.WSEmployeeService.EmployeeContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\WSEmployeeService\EmployeeService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\WSEmployeeService\WebApplicationPoderosa.WSEmployeeService.EmployeeInfo1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WSPoderosaService\CustomerService.disco" />
     <None Include="Connected Services\WSPoderosaService\configuration91.svcinfo" />
     <None Include="Connected Services\WSPoderosaService\configuration.svcinfo" />
@@ -250,11 +256,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Employee\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
