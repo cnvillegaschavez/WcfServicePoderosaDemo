@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationPoderosa", "W
 		{AF0D831C-7378-4110-941B-B2DFB911E4A1} = {AF0D831C-7378-4110-941B-B2DFB911E4A1}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppWCFNetTcpDemo", "ConsoleAppWCFNetTcpDemo\ConsoleAppWCFNetTcpDemo.csproj", "{517DF42F-0AC9-4B58-9C2F-5965B90695C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFNetTcpDemo", "WFNetTcpDemo\WFNetTcpDemo.csproj", "{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,14 @@ Global
 		{6B954432-0010-4BAF-8151-203A89FE4AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B954432-0010-4BAF-8151-203A89FE4AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B954432-0010-4BAF-8151-203A89FE4AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{517DF42F-0AC9-4B58-9C2F-5965B90695C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517DF42F-0AC9-4B58-9C2F-5965B90695C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517DF42F-0AC9-4B58-9C2F-5965B90695C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517DF42F-0AC9-4B58-9C2F-5965B90695C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

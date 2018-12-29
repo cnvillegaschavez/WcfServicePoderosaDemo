@@ -1,0 +1,10 @@
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.csprojAssemblyReference.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.Form1.resources
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.Properties.Resources.resources
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.csproj.GenerateResource.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.csproj.CoreCompileInputs.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\bin\Debug\WFNetTcpDemo.exe.config
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\bin\Debug\WFNetTcpDemo.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\bin\Debug\WFNetTcpDemo.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFNetTcpDemo\obj\Debug\WFNetTcpDemo.pdb

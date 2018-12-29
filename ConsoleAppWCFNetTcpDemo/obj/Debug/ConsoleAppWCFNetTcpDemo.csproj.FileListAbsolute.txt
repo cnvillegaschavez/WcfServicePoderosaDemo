@@ -1,0 +1,12 @@
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\ConsoleAppWCFNetTcpDemo.exe.config
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\ConsoleAppWCFNetTcpDemo.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\ConsoleAppWCFNetTcpDemo.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\Topshelf.dll
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\WcfServicePoderosa.Contracts.dll
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\WcfServicePoderosa.Contracts.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\bin\Debug\Topshelf.xml
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\obj\Debug\ConsoleAppWCFNetTcpDemo.csprojAssemblyReference.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\obj\Debug\ConsoleAppWCFNetTcpDemo.csproj.CoreCompileInputs.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\obj\Debug\ConsoleAppWCFNetTcpDemo.csproj.CopyComplete
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\obj\Debug\ConsoleAppWCFNetTcpDemo.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppWCFNetTcpDemo\obj\Debug\ConsoleAppWCFNetTcpDemo.pdb
