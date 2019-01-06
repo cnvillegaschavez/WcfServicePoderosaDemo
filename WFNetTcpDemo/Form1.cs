@@ -11,12 +11,20 @@ namespace WFNetTcpDemo
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void InstanceService()
+        {
             personServiceClient = new WCFPersonService.PersonServiceClient();
+            personServiceClient.ClientCredentials.UserName.UserName = "admin";
+            personServiceClient.ClientCredentials.UserName.Password = "admin@1";
+            personServiceClient.ClientCredentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.None;
         }
 
         private void BtnGetPerson_Click(object sender, EventArgs e)
         {
             int.TryParse(TxtPersonId.Text, out int personId);
+            InstanceService();
             var person = personServiceClient.GetPersonById(personId);
             if (person != null)
             {
@@ -40,7 +48,7 @@ namespace WFNetTcpDemo
             response = personServiceClient.Transfer2(origin, destination, 5000);
 
             scope.Complete();
-            
+
         }
     }
 }

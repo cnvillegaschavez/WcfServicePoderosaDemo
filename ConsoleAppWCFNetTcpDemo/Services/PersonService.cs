@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.ServiceModel;
 using WcfServicePoderosa.Contracts.Contracts;
 
@@ -10,6 +11,7 @@ namespace ConsoleAppWCFNetTcpDemo.Services
         ReleaseServiceInstanceOnTransactionComplete = true)]
     public class PersonService : IPersonService
     {
+        [PrincipalPermission(SecurityAction.Demand, Role ="admin")]
         public Person GetPersonById(int id)
         {
             return GetAllPersons().FirstOrDefault(p => p.Id == id);
