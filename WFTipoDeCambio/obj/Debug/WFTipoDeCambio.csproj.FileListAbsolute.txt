@@ -1,0 +1,14 @@
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\bin\Debug\WFTipoDeCambio.exe.config
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\bin\Debug\WFTipoDeCambio.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\bin\Debug\WFTipoDeCambio.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\bin\Debug\HtmlAgilityPack.dll
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\bin\Debug\HtmlAgilityPack.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\bin\Debug\HtmlAgilityPack.xml
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.csprojAssemblyReference.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.Form1.resources
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.Properties.Resources.resources
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.csproj.GenerateResource.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.csproj.CoreCompileInputs.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.csproj.CopyComplete
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WFTipoDeCambio\obj\Debug\WFTipoDeCambio.pdb
