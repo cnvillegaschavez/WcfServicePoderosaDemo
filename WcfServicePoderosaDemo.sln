@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppWCFNetTcpDemo", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFNetTcpDemo", "WFNetTcpDemo\WFNetTcpDemo.csproj", "{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppSUNATRUC", "ConsoleAppSUNATRUC\ConsoleAppSUNATRUC.csproj", "{D53158B2-612E-43A7-8DFE-0DF5EBD89B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5AFE7AC-AF22-4A1A-850D-41CE9DB7B663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D53158B2-612E-43A7-8DFE-0DF5EBD89B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53158B2-612E-43A7-8DFE-0DF5EBD89B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53158B2-612E-43A7-8DFE-0DF5EBD89B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53158B2-612E-43A7-8DFE-0DF5EBD89B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

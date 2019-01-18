@@ -8,3 +8,4 @@ F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WcfServicePoderosa.Contracts\bin\
 F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WcfServicePoderosa.Contracts\obj\Debug\WcfServicePoderosa.Contracts.csproj.CoreCompileInputs.cache
 F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WcfServicePoderosa.Contracts\obj\Debug\WcfServicePoderosa.Contracts.dll
 F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WcfServicePoderosa.Contracts\obj\Debug\WcfServicePoderosa.Contracts.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WcfServicePoderosa.Contracts\obj\Debug\WcfServicePoderosa.Contracts.csprojAssemblyReference.cache

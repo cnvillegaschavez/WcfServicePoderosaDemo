@@ -1,0 +1,11 @@
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\bin\Debug\ConsoleAppSUNATRUC.exe.config
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\bin\Debug\ConsoleAppSUNATRUC.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\bin\Debug\ConsoleAppSUNATRUC.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\obj\Debug\ConsoleAppSUNATRUC.csprojAssemblyReference.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\obj\Debug\ConsoleAppSUNATRUC.csproj.CoreCompileInputs.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\obj\Debug\ConsoleAppSUNATRUC.exe
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\obj\Debug\ConsoleAppSUNATRUC.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\bin\Debug\Newtonsoft.Json.dll
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\bin\Debug\Newtonsoft.Json.pdb
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\bin\Debug\Newtonsoft.Json.xml
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\ConsoleAppSUNATRUC\obj\Debug\ConsoleAppSUNATRUC.csproj.CopyComplete

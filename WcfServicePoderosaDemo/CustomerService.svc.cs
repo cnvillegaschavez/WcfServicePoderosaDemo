@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
 using WcfServicePoderosa.Contracts.Contracts;
 
@@ -12,6 +14,8 @@ namespace WcfServicePoderosaDemo
     {
         public bool Create(CustomerCreate customerCreate)
         {
+            //Mapping customerDto = customerCreate; 
+            //Insert(CustomerDto)
             return true;
         }
 
@@ -19,10 +23,27 @@ namespace WcfServicePoderosaDemo
         {
             var customers = new List<Customer>
             {
-                new Customer { Code="001", Name="PODEROSA" },
-                new Customer { Code="002", Name="LAS BAMBAS" }
+                new Customer { Id="1",  Code="001", Name="PODEROSA" },
+                new Customer { Id="2",  Code="002", Name="LAS BAMBAS" }
             };
             return customers;
+        }
+
+        public Customer GetbyCodeJson(string code)
+        {
+            var customer = GetCustomers().FirstOrDefault(a => a.Code == code);
+            return customer;
+        }
+
+        public Customer GetbyCodeXml(string code)
+        {
+            var customer = GetCustomers().FirstOrDefault(a => a.Code == code);
+            return customer;
+        }
+
+        public string CreateJson(CustomerCreate customerCreate)
+        {
+            return Guid.NewGuid().ToString(); 
         }
     }
 }
