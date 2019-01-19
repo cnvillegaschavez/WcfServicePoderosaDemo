@@ -37,7 +37,7 @@ namespace WcfServicePoderosa.Contracts.Contracts
         public string Address { get; set; }
     }
 
-    [DataContract( Namespace = "http://poderosa.com/employee")]
+    [DataContract(Namespace = "http://poderosa.com/employee")]
     public class Employee
     {
         [DataMember]

@@ -1,9 +1,15 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using WebApplicationPoderosa.Models;
 
 namespace WebApplicationPoderosa.Controllers
@@ -34,10 +40,36 @@ namespace WebApplicationPoderosa.Controllers
             serializerToUplaod.WriteObject(ms, customer);
             var data = Proxy1.UploadData("http://localhost:1421/CustomerService.svc/createjson", "POST", ms.ToArray());
             var stream = new MemoryStream(data);
-             var  obj = new DataContractJsonSerializer(typeof(CustomerModel));
+            var obj = new DataContractJsonSerializer(typeof(CustomerModel));
             var resultStudent = obj.ReadObject(stream) as string;
-
             return View("View");
         }
+
+        [HttpGet]
+        public ActionResult Search()
+        {
+            return View("Search");
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Search(string code)
+        {
+            HttpClient client = new HttpClient();
+            var basePath = ConfigurationManager.AppSettings["ServiceUrl"];
+            var path =$"{basePath}/getbycodejson/{code}";
+            HttpResponseMessage response = await client.GetAsync(path);
+            var customer = string.Empty;
+            if (response.IsSuccessStatusCode)
+            {
+                customer = await response.Content.ReadAsStringAsync();
+            }
+            var result = JsonConvert.DeserializeObject<CustomerResponse>(customer);
+
+            var customers = new List<CustomerModel>();
+            customers.Add(result.GetbyCodeJsonResult);
+            return View("Search", customers);
+        }
+
+        
     }
 }

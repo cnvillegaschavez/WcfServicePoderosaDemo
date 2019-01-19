@@ -180,3 +180,8 @@ F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\roslyn
 F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\roslyn\VBCSCompiler.exe
 F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\roslyn\VBCSCompiler.exe.config
 F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\obj\Debug\WebApplicationPoderosa.csprojAssemblyReference.cache
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\System.Net.Http.Extensions.dll
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\System.Net.Http.Primitives.dll
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\System.Net.Http.Extensions.xml
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\bin\System.Net.Http.Primitives.xml
+F:\Free\Formativa\Demos\WcfServicePoderosaDemo\WebApplicationPoderosa\obj\Debug\WebApplicationPoderosa.csproj.App.config
